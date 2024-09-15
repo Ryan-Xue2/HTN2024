@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindspace</title>
+    {% include 'styles.html' %}
+
+</head>
+<body>
+    <h1 style="font-size: 48px;">Mindspace</h1>
+    <br>
+
+    <!-- Description of the website -->
+    <div class="container">
+        <p class="lead text-center" style="margin-bottom: 30px;">
+            Welcome to Mindspace. Upload an image and provide what you want to remember. We create powerful 
+            visual associations, helping you memorize better and faster.
+        </p>
+    </div>
+
+    <!-- Form to upload image and provide prompt -->
+    <div class="container">
+        <form action="{{ url_for('generate') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" class="cool-input" style="width: 100%; margin-bottom: 20px;">
+            <input type="text" name="prompt" class="cool-input" placeholder="What do you want to remember?" style="width: 100%; margin-bottom: 20px;">
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+
+    <!-- Additional information about memory techniques -->
+    <div class="container" style="margin-top: 30px;">
+        <h3 class="text-center">Learn More About Memory Techniques</h3>
+        <ul class="list-unstyled text-center">
+            <li><a href="https://artofmemory.com/" class="cool-link" target="_blank">Art of Memory</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+

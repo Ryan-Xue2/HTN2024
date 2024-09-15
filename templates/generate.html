@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Image - Mindspace</title>
+    {% include 'styles.html' %}
+</head>
+<body>
+    <h1 style="font-size: 48px;">Mindspace</h1>
+    <br>
+
+    <div class="container">
+        <h2 class="text-center">Generated Image</h2>
+        <div class="text-center">
+            <img src="{{ image_url }}" alt="Generated Image" class="img-responsive center-block" style="max-width: 100%; height: auto; margin-top: 20px;">
+        </div>
+        <div class="text-center" style="margin-top: 20px;">
+            <a href="{{ url_for('index') }}" class="cool-link">Generate Another</a>
+        </div>
+    </div>
+</body>
+</html>
